@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul{
+                list-style-type: none;
+            }
+            li {
+                color:#fff;
+                cursor: pointer;
+            }
+            .list-item{
+                padding: 10px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .sub-item{
+                padding:10px;
+                
+            }
+            .submenu{
+                display:none;
+                background-color: grey;
+                position: absolute;
+                top: 56px;
+    left: 100px;
+
+            }
+            ul li:hover .submenu{
+                display: block;
+            }
+        </style>
+        <title>
+            Nav Bar Demo
+        </title>
+    </head>
+    <body>
+        <!-- <p>Hello paragraph</p>
+        <p>Hello paragraph</p>
+        <a href="google.com">google</a>
+        <a href="facebook.com">facebook</a> -->
+       <div style="background-color: blue;height:80px;">
+            <ul style="display: inline-flex">
+                <li class="list-item">
+                    Home
+                </li>
+                <li class="list-item">
+                    Course
+                    <ul style="background-color: grey;" class="submenu">
+                        <li class="sub-item">
+                            C 
+                        </li>
+                        <li class="sub-item">
+                            java
+                        </li>
+                        <li class="sub-item">
+                            python
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-item">
+                    Abouts
+                </li>
+                <li class="list-item">
+                    ContactUs
+                </li class="list-item">
+            </ul>
+       </div>
+    </body>
+</html>
+

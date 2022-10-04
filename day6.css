@@ -1,0 +1,54 @@
+.main-heading{
+    color:red;
+    font-size: 20px;
+}
+.menu-list{
+    list-style-type: none;
+    display: inline-flex;
+}
+.menu-item{
+    padding:10px;
+    margin:10px;
+    color:#fff;
+}
+
+.main-nav{
+    height:80px;
+    width:100%;
+    background-color: blue;
+}
+ul li a{
+    color:#fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.items{
+    display: inline-flex;
+    position:absolute;
+    right:0px;
+}
+
+/* .items>.menu-item a:hover{
+    color:red;
+    border:2px solid #fff;
+    background-color: green;
+} */
+.items > .menu-item:hover{
+    background-color: green;
+}
+.active{
+    background-color: green;
+}
+
+.input-box{
+    height:30px;
+    width:200px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    background-color: cyan;
+}
+
+.form-item{
+    margin:10px;
+}

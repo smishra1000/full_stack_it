@@ -1,0 +1,19 @@
+.external-div{
+    color:green;
+    background-color: black;
+}
+.external-2{
+    height:200px;
+    width:200px;
+    margin-top:20px;
+}
+
+
+.p1{
+    font-size: 20px;
+    color:green
+}
+#div2{
+    background-color: blue;
+    color:red;
+}
