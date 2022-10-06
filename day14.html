@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .btn{
+                width:120px;
+                height:50px;
+                background-color: blue;
+                color:#fff;
+                border-radius: 10px;;
+            }
+            body {
+                background: url("chesky.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        
+        </style>
+        <title>
+            js demo
+        </title>
+    </head>
+    <body >
+        <div id="box1" style="background:red;height:125px;width:125px;">
+
+        </div>
+        <button class="btn" onclick="show()">Show me</button>
+        <button class="btn"  onclick="hide()">Hide Me</button>
+        <button onclick="alert('hello')">Show Alert</button>
+        <script>
+            function show(){
+                document.getElementById("box1").style.display="block"
+            }
+            function hide(){
+                document.getElementById("box1").style.display="none"
+            }
+            // document.getElementById("box1").innerHTML="box 1 demo by div and javascript"
+            // document.getElementById("box1").style.color="red";
+            // document.getElementById("box1").style.background="cyan"
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
