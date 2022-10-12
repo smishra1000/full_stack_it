@@ -1,0 +1,115 @@
+Operators in javascript
+
+operator is a symbol used to perform operation like(+,-,) comaprison,logical 
+
+ex- 
+let a = 20
+let b= 40
+a+b=60
+
+oparand + operand=result 
+a = 50,b=40
+a-b 
+
+Arithmatic operator 
++ - * / %
+a =30 b=20 
+
++  --used to add two operands 
+
+a+b = 50 
+
+-=a-b = 10 
+
+* a*b = 600 
+
+/ 30/20 
+
+/----it will give quotient
+%--it will give remiander
+
+9%3=0
+9/3=3 
+
+
+assigment operator
+ex- a = 30
+
+
+comparison operator---comparision operator is used to compare two values
+
+ex- a=40,b=30 
+a>b   true 
+a<b   false 
+a==b  false 
+
+a===b  false 
+
+a=30  b = "30" 
+a==b   true
+
+a===b   false 
+<=
+>=
+!= 
+
+Logical operator 
+
+Logical operator is uesed to combine multiple comparison operator 
+
+&&---if both are true it will return true 
+||--if either on of true it will return true
+!--- just opposite of true false 
+
+a = 40 b =50 c =10
+a>b && b>c 
+false && true -----false 
+
+
+false || true ----true 
+
+!false =true 
+
+++x-----pre increament ----first it will increment the value then it will store it
+x++-----post increament---first it will store the value then it will increment 
+
+x  = 50 
+
+y = ++x 
+
+x = x +1 //51 
+y = x //51
+
+String Concatenation operator (+) 
+str = "hello"
+str2 ="world" 
+console.log(str+str2) ///hello world
+
+control flow with desicion making 
+
+if else if else statemnt 
+
+
+the if statemnt is used to execute a block of code only if the specified consdition is true
+
+if(condition) {
+
+}
+
+if---else statement--> The if else statement allows you to excute one block of code if the specified condition is true and another bloack of code if the specified consition id false
+
+
+if ---else if---else -> 
+
+if(consdition) {
+
+}else if(condition) {
+
+}else {
+    
+}
+
+
+
+
+

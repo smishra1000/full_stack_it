@@ -14,19 +14,74 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-        
+            .outer1{
+                background-color: red;
+                border:2px solid black;
+                width:250px;
+                height:200px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                display: flex;
+            }
+            .outer2{
+                background-color: pink;
+                border:2px solid black;
+                width:200px;
+                height:160px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                display: flex;
+            }
+            .outer3{
+                background-color: yellow;
+                border:2px solid black;
+                width:150px;
+                height:120px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                display: flex;
+            }
+            .inner{
+                background-color: green;
+                border:2px solid black;
+                width:100px;
+                height:39px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
         </style>
         <title>
             js demo
         </title>
     </head>
     <body >
-        <div id="box1" style="background:red;height:125px;width:125px;">
+        <div class="outer1">
+            <span style="position: absolute;
+            top: 8px;
+            left: 22px;">margin</span>
+            <div class="outer2">
+                <span style="position: absolute;top: 30px;left: 43px;">border</span>
+                <div class="outer3">
+                    <span style="position: absolute;top: 49px;left: 72px;">padding</span>
+                    <div class="inner">
+                        1234 x 1234
+                    </div>
+
+                </div>
+            </div>
+        </div>
+       
+        <!-- <div id="box1" style="background:red;height:125px;width:125px;">
 
         </div>
         <button class="btn" onclick="show()">Show me</button>
         <button class="btn"  onclick="hide()">Hide Me</button>
-        <button onclick="alert('hello')">Show Alert</button>
+        <button onclick="alert('hello')">Show Alert</button> -->
         <script>
             function show(){
                 document.getElementById("box1").style.display="block"
