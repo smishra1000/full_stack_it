@@ -29,6 +29,7 @@
     <script>
       function saveData() {
         isError = false;
+        document.getElementById("error").innerHTML ="";
         event.preventDefault();
         var error = [];
         var fname = document.getElementById("fname").value;
@@ -41,7 +42,11 @@
         } else if (lname === "") {
           error.push("please enter lname");
           isError = true;
-        } else if (
+         }else if(email===""){
+            error.push("please enter email");
+          isError = true;
+         }
+         else if (
           !email.match(
             /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
           )
