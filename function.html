@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            // function sum(a,b){
+            //     console.log(a+b)
+            // }
+            // sum(30,40);
+            // sum(70,80)
+            // promise---
+            // function getUser(){
+            //     return new Promise(function(resolve,reject){
+            //         resolve("iandt")
+            //     })
+            // }
+
+            // getUser().then(function(res){
+            //     console.log("return from function =",res)
+                
+            // }).catch(function(err){
+            //     console.log(err)
+            // })
+            // console.log("after")
+
+            // function mummygo(){
+            //     return new Promise(function(resolve,reject){
+            //         reject("shop already closed")
+            //     })
+            // }
+
+            // function eatCake(){
+            //     return new Promise(function(resolve,reject){
+            //         resolve("completed")
+            //     })
+            // }
+
+            // mummygo().then(function(cake){
+            //     eatCake().then(function(res){
+            //         console.log("no more cake")
+            //     })
+            // }).catch(function(err){
+            //     console.log("didnt get cake because",err)
+            // })
+
+
+            // function sayHello(){
+            //     console.log("hello");
+            // }
+            // sayHello();
+            // console.log("first");
+            // printSecond().then(function(res){
+            //     console.log("third");
+            // })
+           
+            
+
+            // function printSecond(){
+            //     return new Promise(function(resolve,reject){
+            //         setTimeout(function(){
+            //             console.log("second")
+            //             resolve("second")
+            //         },8000)
+            //     })
+            // }
+            
+            //Higher order function
+
+            // function sum(func){
+            //     console.log(func)
+            //     func("good morning");
+            // }
+            
+            function sayHello(greet){
+                console.log("hello",greet)
+            }
+
+            // sum(sayHello);
+
+            function sum(a,b,c) {
+                console.log(a,b,c)
+                c("good eveniong");
+                console.log(a+b)
+            }
+
+            sum(2,3,sayHello)
+            sayHello("good morning")
+
+            var salry = [1000,2000,3000,4000,5000]
+
+            // map----
+            console.log("before map=",salry)
+             a = salry.map(function(i,s){
+                console.log(i,s)
+                return  i*2;
+            });
+
+            console.log("after map a=",a)
+           
+
+
+            let ages =[20,30,10,50,40]
+            console.log("before  filter age = ",ages)
+            ages = ages.filter(function(item){
+                return item>30
+            })
+
+           var a1 = [];
+           a1.push(2);
+           a1.push("test");
+           a1.push("30")
+           console.log(a1);
+           a1.pop();
+           console.log(a1);
+
+           var salaries = [100,200,50,150,300];
+           var filteredSalary = [];
+           for(i=0;i<salaries.length;i++) {
+            if(salaries[i]>150){
+                filteredSalary.push(salaries[i])
+            }
+           }
+
+           console.log("after filter=",filteredSalary)
+
+
+
+
+        </script>
+    </body>
+</html>
