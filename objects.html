@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        .parent{
+            width:400px;
+            height:400px;
+            background-color: cyan;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .child1{
+            width:200px;
+            height:200px;
+            background-color: red;
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child2{
+            width:100px;
+            height:100px;
+            background-color: green;
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:600px;
+        } */
+        p{
+            border: 2px dotted red;
+        }
+    </style>
+    <title>Objects demo</title>
+  </head>
+  <body>
+    <p>hello paragraph with border dotted</p>
+    <!-- <div class="parent">
+        <div class="child1">
+            <div class="child2">
+               
+            </div>
+        </div>
+
+    </div> -->
+    <!-- <script>
+      var a = {
+        name: "test",
+        age: 20,
+      };
+
+      var user = {
+        name: "test",
+        age: 20,
+        displayName: function () {
+          console.log(user === this);
+          console.log("user name=", this.name);
+        },
+      };
+
+      user.displayName();
+
+      var x = 30;
+      function showInfo() {
+        console.log(x,this.x);
+      }
+      showInfo();
+
+      function outer(){
+        var x= 30
+        return function inner(){
+            console.log("i am inner",x)
+        }
+      }
+
+    function parent(){
+        var fage = 30
+        return function child(){
+            var sage=10;
+            console.log("from child",fage,sage)
+        }
+    }
+
+    console.log(parent()())
+
+      //console.log(outer()());
+    </script> -->
+    <script>
+       function parent(){
+            var age =30
+            console.log("from parent age=",age)
+            // return function inner(){
+            //     console.log(age)
+            // }
+            return "hello from poarent"
+       }
+
+       console.log(parent())
+    </script>
+  </body>
+</html>

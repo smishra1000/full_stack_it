@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table,th,td{
+                border: 2px solid red;
+            }
+        table,td,th{
+            border-collapse: collapse;
+        }
+            body{
+                justify-content: center;
+                display: flex;
+            }
+            .employee-form{
+                height:400px;
+                width:400px;
+                background-color: cyan;
+            }
+           .save-button{
+            width:80px;
+            height:30px;
+            background-color: blue;
+            color:#fff;
+            border: none;
+            border-radius: 5px;
+           }
+        </style>
+        <title>
+            CURD DEMO
+        </title>
+    </head>
+    <body>
+        <div class="employee-form">
+            <h1 style="text-align:center">CURD DEMO</h1>
+            <div style="padding:10px;margin:5px;">
+                <form onsubmit="saveEmployee()">
+                    <label>
+                        First Name
+                    </label>
+                    <input type="text" name="fname" value="" id="fname"/>
+                    <br>
+                    <label>
+                        Last Name
+                    </label>
+                    <input type="text" name="lname" value="" id="lname"/>
+                    <br>
+                    <label>
+                       Email
+                    </label>
+                    <input type="email" name="email" value="" id="email"/>
+                    <br>
+                    <input type="submit" value="Save" class="save-button"/>
+                </form>
+                <table>
+                    <tr>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                    </tr>
+                    <tbody id="data">
+
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <script>
+            function saveEmployee(){
+                event.preventDefault();
+                var fname = document.getElementById("fname").value
+                var lname = document.getElementById("lname").value
+                var email = document.getElementById("email").value
+                var tbody = document.getElementById("data")
+                reset();
+
+                var tableData = `<tr>
+                    <td>${fname}</td>
+                    <td>${lname}</td>
+                    <td>${email}</td>
+                    </tr>`
+                    tbody.innerHTML= tbody.innerHTML+tableData
+            }
+
+            function reset(){
+                document.getElementById("fname").value = ""
+                document.getElementById("lname").value=""
+                document.getElementById("email").value=""
+            }
+        </script>
+    </body>
+</html>
