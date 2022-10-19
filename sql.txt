@@ -1,0 +1,55 @@
+database--
+
+sql--
+
+type of database 
+
+relational  db 
+
+non relational db 
+
+name   age   roll 
+
+test    20    211
+
+
+{
+	name:test,
+	age:20,
+	roll:120
+
+}
+
+
+ex for relationl db---mysql,oracle,postgres 
+
+ex for non realtional db---mongodb,mariadb,cassandra
+
+
+client/ui     backend/server    database 
+
+command for sql 
+
+select---use to select the data from table 
+
+create table command is used to create table 
+
+
+create table employee (
+	id int,
+	name varchar(10),
+	adress varchar(50),
+	age int
+  );
+
+insert into table ----
+insert into employee(id,name,adress,age) values(101,"sundar","hyd",29);
+insert into employee(id,name,adress,age) values(102,"test2","blr",30);
+insert into employee(id,name,adress,age) values(103,"test3","vizag",32);
+
+select age,name,adress from employee where id=101;
+
+select age,name,adress from employee where id=101;
+select count(id) from employee;
+
+

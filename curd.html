@@ -69,6 +69,7 @@
                     </tbody>
                 </table>
             </div>
+            <a href="https://google.com" onclick="navigate()">google</a>
             
         </div>
         <script>
@@ -92,6 +93,9 @@
                 document.getElementById("fname").value = ""
                 document.getElementById("lname").value=""
                 document.getElementById("email").value=""
+            }
+            function navigate(){
+                event.preventDefault();
             }
         </script>
     </body>
