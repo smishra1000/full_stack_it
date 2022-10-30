@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo for inheritance</title>
+    </head>
+    <body>
+        <script>
+            class Person{
+                constructor(name,age){
+                    this.name=name;
+                    this.age=age;
+                }
+                showPersonInfo(){
+                    console.log("info==",this.name,this.age)
+                }
+                show(){
+                    console.log("hello show from parent");
+                }
+            }
+
+            class User extends Person{
+                constructor(name,age,email,address){
+                    super(name,age)
+                    this.email = email;
+                    this.address = address;
+                }
+
+                shoUserInfo(){
+                    console.log("user info==",this.email,this.address)
+                }
+                show(){
+                    super.show();
+                    console.log("hello show from child");
+                }
+            }
+
+            // let p1 = new Person("sameer",20)
+            // p1.showPersonInfo();
+
+            let u1 = new User("sameer",20,"sam@gmail.com","hyd");
+            u1.showPersonInfo();
+            u1.shoUserInfo();
+            u1.show();
+            let p1 = new Person("sundar",30);
+            p1.showPersonInfo();
+            p1.show();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DFEmo for advance js
+        </title>
+    </head>
+    <body>
+        <script>
+        //     var user1 = {
+        //         name:"sameer",
+        //         show:function(greet){
+        //             console.log(this.name,greet)
+        //         }
+        //     }
+
+        //     user1.show("mid night");
+
+        //     var user2 = {
+        //         name:"i&t"
+        //     }
+        //     var user3 = {
+        //         name:"sundar"
+        //     }
+
+        //     //call apply  bind 
+
+        //     user1.show.call(user3,"googd morning")
+        //     user1.show.apply(user3,["good night"])
+        // var newFun = user1.show.bind(user3);
+        // newFun("aftrennon");
+
+
+
+
+
+            // var a = 30;
+            // function sayHello(){
+            //     console.log(this.a)
+            // }
+            // sayHello();
+
+            //naming conventions
+
+            // 1> always start with $,_,alphabet 
+            // 2> dont use any prefdefined keyword 
+
+            // 3>dont start with number 
+
+            // 4>no balnkl spaces between variables
+
+            // var if=20;
+
+            // var _uuu=20;
+
+            // var age is = 20;
+
+            // var obj = {} ///obejct literal 
+            // var user = {
+            //     name:"sameer",
+            //     show:function(){
+            //         console.log("hello")
+            //     }
+            // }
+            // var user2 = {
+            //     name:"sundar",
+            //     show:function(){
+            //         console.log("hello")
+            //     }
+            // }
+
+            //constructor function 
+
+            // function User(name,age){
+            //     this.name=name
+            //     this.age=age;
+            //     this.show = function(){
+            //         console.log("hello i m from constructor function")
+            //     }
+            // }
+
+            // user1 = new User("sameer",20);
+            // user2  = new User("sundar",30);
+            // console.log(user1);
+            // console.log(user2);
+            // user3 = new User("ram",50);
+            // console.log(user3)
+            //oops
+
+            //object oriented programming
+
+            class Person{
+                constructor(name,age){
+                    this.name = name;
+                    this.age = age
+                }
+                show(){
+                    console.log(this.name,this.age)
+                }
+                displayInCaps(){
+                   this.name = this.name.trim();
+                   console.log(this.name);
+                }
+            }
+            let p1 = new Person("    sameer",20);
+           
+            p1.displayInCaps();
+            p1.show();
+            let p2 = new Person("      sundar",39);
+            p2.show();
+
+            var a = "    sameer"
+            function show(){
+               a = a.trim();
+               console.log("after vtrim a==",a)
+            }
+           
+
+            show();
+            console.log("after vtrim a==",a)
+        </script>
+    </body>
+</html>

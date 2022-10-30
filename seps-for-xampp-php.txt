@@ -1,0 +1,88 @@
+Create a new PHP script for adding new data to that database in our SQL Database
+We will be building a simple PHP script in which we will be used to add data to our SQL table
+ which we have created in our previous article. Using this script we will 
+ be adding data to our SQL table. 
+
+Step by Step Implementation
+
+Step 1: Start your XAMPP server
+
+step 2 . create data base in php myadmin
+
+Step 2: Navigate to xampp folder 
+
+Now we have to navigate to C drive in your pc and inside that check for the folder name as xampp. Inside that folder navigate to htdocs folder and create a new folder in that and name it as 
+curdapp. Inside this folder, we will be storing all our PHP scripts. 
+Now for writing your PHP script we can use any simple text editor. 
+I am using VS code. 
+After creating this folder we simply have to open this folder in VS code. 
+
+Step 3: Creating a new PHP file 
+
+After you open your folder in VS code, 
+inside that folder we have to press a shortcut key as 
+Ctrl+N our new file will be created. We have to save this file
+ with the name addUser.php and add the below code to it. Comments are added in the code to get to know in more detail.   
+
+<?php
+ 
+$servername = "localhost";
+ 
+// for testing the user name is root.
+$username = "root";
+ 
+// the password for testing is "blank"
+$password = "";
+ 
+// below is the name for our
+// database which we have added.
+$dbname = "curdapp";
+  
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+ 
+ // an array to display response
+ $response = array();
+ // on below line we are checking if the body provided by user contains
+ // this keys as user name,user email  and user age 
+ if($_POST['userName'] && $_POST['userEmail'] && $_POST['userAge']){
+     // if above three parameters are present then we are extracting values
+     // from it and storing it in new variables.
+     $userName = $_POST['userName'];
+     $userEmail = $_POST['userEmail'];
+     $userAge = $_POST['userAge'];
+     // after that we are writing an sql query to
+     // add this data to our database.
+     // on below line make sure to add your table name
+     // in previous article we have created our table name
+     // as userDb and add all column headers to it except our id.
+     $stmt = $conn->prepare("INSERT INTO `userDb`(`userName`, `userEmail`, `userAge`) VALUES (?,?,?)");
+     $stmt->bind_param("sss",$userName,$userEmail,$userAge);
+   // on below line we are checking if our sql query is executed successfully.
+   if($stmt->execute() == TRUE){
+        // if the script is executed successfully we are
+        // passing data to our response object
+        // with a success message.
+         $response['error'] = false;
+         $response['message'] = "user created successfully!";
+     } else{
+         // if we get any error we are passing error to our object.
+         $response['error'] = true;
+         $response['message'] = "failed\n ".$conn->error;
+     }
+ } else{
+     // this method is called when user
+     // donot enter sufficient parameters.
+     $response['error'] = true;
+     $response['message'] = "Insufficient parameters";
+ }
+ // at last we are printing our response which we get.
+ echo json_encode($response);
+ ?>
+ 
+Step 4: Getting URL for our PHP script 
+
+For getting the URL for our PHP script we simply have to type localhost in our browser and we have to append it with our folder name and file name. You will get to see the URL highlighted below:  
+
+http://localhost/curdapp/addUser.php
+Now we will be adding data in our SQL table with this URL in postman.  

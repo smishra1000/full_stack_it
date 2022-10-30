@@ -52,4 +52,93 @@ select age,name,adress from employee where id=101;
 select age,name,adress from employee where id=101;
 select count(id) from employee;
 
+Constraints
+
+
+constraints-- 
+
+create table student(
+    id int Not NUll,
+    email Primary key,
+    mobile 
+)
+
+Not NULL ----ENSURES that a filed or column cannot have NULL values
+
+Unique---ensures that all values in a column are different
+
+primary key--its a combined form of NOT NULL and Unique 
+
+Default---use to provide or set a default values 
+
+Check ---check is use to ensures that the values in a column
+ specify the condition
+
+create table employee(
+  id int NOT NULL,
+  name varchar(20) NOT NULL,
+  age int
+  );
+
+  create table employee(
+  id int NOT NULL UNIQUE,
+  name varchar(20) NOT NULL,
+  age int
+  );
+
+  create table employee(
+  id int NOT NULL,
+  name varchar(20) NOT NULL,
+  age int,
+  PRIMARY KEY(id)
+  );
+
+   create table employee(
+  id int NOT NULL,
+  name varchar(20) NOT NULL,
+  age int DEFAULT 30,
+  companyName varchar(20) DEFAULT "I&T",
+  PRIMARY KEY(id)
+  );
+
+  insert into employee(id,name,age,companyName) values(102,"test2",40,"abc");
+
+  create table employee(
+  id int NOT NULL,
+  name varchar(20) NOT NULL,
+  age int DEFAULT 30,
+  companyName varchar(20) DEFAULT "I&T",
+  CHECK (age>18),
+  PRIMARY KEY(id)
+  );
+
+  insert into employee(id,name,age,companyName) values(103,"test3",19,"abcd");
+
+
+  drop table employee;
+create table employee(
+  id int,
+  name varchar(10),
+  age int,
+  departmentId int
+  );
+  create table department(
+  deptId int,
+  deptName varchar(10),
+  deptRole int
+  );
+
+  insert into employee(id,name,age,departmentId) values(3,"test3",26,103)
+
+/*inner join---*/
+
+SELECT employee.id ,employee.name,department.deptName,department.deptRole from employee 
+inner join department on employee.departmentId=department.deptId
+
+
+/*left join*/
+
+select department.deptName,department.deptRole,employee.id, employee.name from department
+left join employee on department.deptId=employee.departmentId
+
 
